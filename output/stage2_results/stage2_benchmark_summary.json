@@ -1,0 +1,44 @@
+{
+  "RGB-Only": {
+    "mode": "RGB-Only",
+    "mAP": 0.0,
+    "mAP50": 0.0,
+    "mAP75": 0.0,
+    "mAPS": 0.0,
+    "mAPM": 0.0,
+    "mAPL": 0.0,
+    "params_M": 60.63,
+    "weights_MB": 462.63,
+    "latency_ms": 87.66,
+    "fps": 11.41,
+    "pipeline_fps": 8.5
+  },
+  "Thermal-Only": {
+    "mode": "Thermal-Only",
+    "mAP": 0.0,
+    "mAP50": 0.0,
+    "mAP75": 0.0,
+    "mAPS": 0.0,
+    "mAPM": 0.0,
+    "mAPL": 0.0,
+    "params_M": 60.63,
+    "weights_MB": 462.63,
+    "latency_ms": 90.68,
+    "fps": 11.03,
+    "pipeline_fps": 8.94
+  },
+  "Full QFDet Baseline": {
+    "mode": "Full QFDet Baseline",
+    "mAP": 0.0,
+    "mAP50": 0.0,
+    "mAP75": 0.0,
+    "mAPS": 0.0,
+    "mAPM": 0.0,
+    "mAPL": 0.0,
+    "params_M": 60.63,
+    "weights_MB": 462.63,
+    "latency_ms": 88.85,
+    "fps": 11.25,
+    "pipeline_fps": 9.06
+  }
+}

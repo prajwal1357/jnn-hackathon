@@ -1,0 +1,26 @@
+{
+  "val": {
+    "split": "val",
+    "mAP": 33.3,
+    "mAP50": 71.8,
+    "mAP75": 26.6,
+    "mAPS": 15.0,
+    "mAPM": 32.3,
+    "mAPL": 57.6,
+    "params_M": 60.67,
+    "latency_ms": 112.3,
+    "fps": 8.9
+  },
+  "test": {
+    "split": "test",
+    "mAP": 29.4,
+    "mAP50": 67.6,
+    "mAP75": 22.7,
+    "mAPS": 12.4,
+    "mAPM": 29.6,
+    "mAPL": 55.5,
+    "params_M": 60.67,
+    "latency_ms": 114.94,
+    "fps": 8.7
+  }
+}

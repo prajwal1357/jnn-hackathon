@@ -1,0 +1,519 @@
+{
+  "num_pairs_analyzed": 20,
+  "total_pedestrians_in_sample": 126,
+  "scale_in_sample": {
+    "small": 15,
+    "medium": 100,
+    "large": 11
+  },
+  "challenge_counts": {
+    "low_illumination": 4,
+    "tiny_pedestrian": 4,
+    "many_pedestrians": 5,
+    "crowded": 3,
+    "cluttered_background": 1,
+    "night_scene": 1
+  },
+  "low_light_pairs": [
+    "01232.jpg",
+    "01617.jpg",
+    "02966.jpg",
+    "03243.jpg",
+    "04709.jpg"
+  ],
+  "night_pairs": [
+    "04709.jpg"
+  ],
+  "tiny_pedestrian_pairs": [
+    "01232.jpg",
+    "02543.jpg",
+    "03449.jpg",
+    "04493.jpg"
+  ],
+  "crowded_pairs": [
+    "01617.jpg",
+    "02966.jpg",
+    "03449.jpg"
+  ],
+  "cluttered_pairs": [
+    "04017.jpg"
+  ],
+  "brightness_stats": {
+    "avg_rgb_brightness": 104.3,
+    "avg_ir_brightness": 122.1,
+    "min_rgb_brightness": 47.6,
+    "max_rgb_brightness": 156.0
+  },
+  "scale_chart_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\scale_distribution_chart.png",
+  "per_pair": [
+    {
+      "pair_idx": 1,
+      "image_id": 50,
+      "file_name": "00051.jpg",
+      "num_pedestrians": 1,
+      "scale_counts": {
+        "small": 0,
+        "medium": 1,
+        "large": 0
+      },
+      "smallest_area": 5265,
+      "largest_area": 5265,
+      "rgb_brightness": 111.4,
+      "ir_brightness": 123.9,
+      "rgb_contrast": 67.9,
+      "ir_contrast": 72.8,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 5.7,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_01_00051.png"
+    },
+    {
+      "pair_idx": 2,
+      "image_id": 322,
+      "file_name": "00323.jpg",
+      "num_pedestrians": 1,
+      "scale_counts": {
+        "small": 0,
+        "medium": 1,
+        "large": 0
+      },
+      "smallest_area": 5084,
+      "largest_area": 5084,
+      "rgb_brightness": 102.1,
+      "ir_brightness": 157.1,
+      "rgb_contrast": 47.9,
+      "ir_contrast": 71.5,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 13.7,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_02_00323.png"
+    },
+    {
+      "pair_idx": 3,
+      "image_id": 539,
+      "file_name": "00540.jpg",
+      "num_pedestrians": 1,
+      "scale_counts": {
+        "small": 0,
+        "medium": 1,
+        "large": 0
+      },
+      "smallest_area": 3276,
+      "largest_area": 3276,
+      "rgb_brightness": 114.1,
+      "ir_brightness": 163.5,
+      "rgb_contrast": 47.6,
+      "ir_contrast": 62.7,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 12.9,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_03_00540.png"
+    },
+    {
+      "pair_idx": 4,
+      "image_id": 739,
+      "file_name": "00740.jpg",
+      "num_pedestrians": 2,
+      "scale_counts": {
+        "small": 0,
+        "medium": 2,
+        "large": 0
+      },
+      "smallest_area": 2046,
+      "largest_area": 3034,
+      "rgb_brightness": 110.4,
+      "ir_brightness": 131.1,
+      "rgb_contrast": 38.1,
+      "ir_contrast": 39.2,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 14.8,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_04_00740.png"
+    },
+    {
+      "pair_idx": 5,
+      "image_id": 941,
+      "file_name": "00942.jpg",
+      "num_pedestrians": 3,
+      "scale_counts": {
+        "small": 0,
+        "medium": 2,
+        "large": 1
+      },
+      "smallest_area": 3600,
+      "largest_area": 22227,
+      "rgb_brightness": 92.2,
+      "ir_brightness": 73.0,
+      "rgb_contrast": 36.2,
+      "ir_contrast": 89.8,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 6.7,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_05_00942.png"
+    },
+    {
+      "pair_idx": 6,
+      "image_id": 1231,
+      "file_name": "01232.jpg",
+      "num_pedestrians": 23,
+      "scale_counts": {
+        "small": 8,
+        "medium": 15,
+        "large": 0
+      },
+      "smallest_area": 434,
+      "largest_area": 9048,
+      "rgb_brightness": 61.6,
+      "ir_brightness": 91.8,
+      "rgb_contrast": 55.8,
+      "ir_contrast": 78.7,
+      "is_low_light": true,
+      "is_night": false,
+      "challenges": [
+        "low_illumination",
+        "tiny_pedestrian",
+        "many_pedestrians"
+      ],
+      "avg_edge_density": 9.7,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_06_01232.png"
+    },
+    {
+      "pair_idx": 7,
+      "image_id": 1616,
+      "file_name": "01617.jpg",
+      "num_pedestrians": 16,
+      "scale_counts": {
+        "small": 0,
+        "medium": 16,
+        "large": 0
+      },
+      "smallest_area": 1650,
+      "largest_area": 4277,
+      "rgb_brightness": 65.9,
+      "ir_brightness": 27.9,
+      "rgb_contrast": 53.1,
+      "ir_contrast": 48.5,
+      "is_low_light": true,
+      "is_night": false,
+      "challenges": [
+        "low_illumination",
+        "crowded",
+        "many_pedestrians"
+      ],
+      "avg_edge_density": 4.4,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_07_01617.png"
+    },
+    {
+      "pair_idx": 8,
+      "image_id": 1934,
+      "file_name": "01935.jpg",
+      "num_pedestrians": 2,
+      "scale_counts": {
+        "small": 0,
+        "medium": 2,
+        "large": 0
+      },
+      "smallest_area": 3612,
+      "largest_area": 3762,
+      "rgb_brightness": 136.1,
+      "ir_brightness": 86.2,
+      "rgb_contrast": 20.1,
+      "ir_contrast": 75.1,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 11.7,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_08_01935.png"
+    },
+    {
+      "pair_idx": 9,
+      "image_id": 2282,
+      "file_name": "02283.jpg",
+      "num_pedestrians": 1,
+      "scale_counts": {
+        "small": 0,
+        "medium": 1,
+        "large": 0
+      },
+      "smallest_area": 4823,
+      "largest_area": 4823,
+      "rgb_brightness": 126.7,
+      "ir_brightness": 70.7,
+      "rgb_contrast": 22.6,
+      "ir_contrast": 55.9,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 14.3,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_09_02283.png"
+    },
+    {
+      "pair_idx": 10,
+      "image_id": 2542,
+      "file_name": "02543.jpg",
+      "num_pedestrians": 1,
+      "scale_counts": {
+        "small": 1,
+        "medium": 0,
+        "large": 0
+      },
+      "smallest_area": 903,
+      "largest_area": 903,
+      "rgb_brightness": 117.1,
+      "ir_brightness": 130.3,
+      "rgb_contrast": 39.4,
+      "ir_contrast": 79.8,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [
+        "tiny_pedestrian"
+      ],
+      "avg_edge_density": 23.9,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_10_02543.png"
+    },
+    {
+      "pair_idx": 11,
+      "image_id": 2776,
+      "file_name": "02777.jpg",
+      "num_pedestrians": 10,
+      "scale_counts": {
+        "small": 0,
+        "medium": 4,
+        "large": 6
+      },
+      "smallest_area": 5358,
+      "largest_area": 20034,
+      "rgb_brightness": 119.0,
+      "ir_brightness": 15.3,
+      "rgb_contrast": 17.9,
+      "ir_contrast": 34.8,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [
+        "many_pedestrians"
+      ],
+      "avg_edge_density": 6.7,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_11_02777.png"
+    },
+    {
+      "pair_idx": 12,
+      "image_id": 2965,
+      "file_name": "02966.jpg",
+      "num_pedestrians": 4,
+      "scale_counts": {
+        "small": 0,
+        "medium": 3,
+        "large": 1
+      },
+      "smallest_area": 3536,
+      "largest_area": 97825,
+      "rgb_brightness": 55.8,
+      "ir_brightness": 48.4,
+      "rgb_contrast": 42.1,
+      "ir_contrast": 46.3,
+      "is_low_light": true,
+      "is_night": false,
+      "challenges": [
+        "low_illumination",
+        "crowded"
+      ],
+      "avg_edge_density": 3.8,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_12_02966.png"
+    },
+    {
+      "pair_idx": 13,
+      "image_id": 3242,
+      "file_name": "03243.jpg",
+      "num_pedestrians": 3,
+      "scale_counts": {
+        "small": 0,
+        "medium": 0,
+        "large": 3
+      },
+      "smallest_area": 20202,
+      "largest_area": 23575,
+      "rgb_brightness": 58.5,
+      "ir_brightness": 177.4,
+      "rgb_contrast": 49.2,
+      "ir_contrast": 66.0,
+      "is_low_light": true,
+      "is_night": false,
+      "challenges": [
+        "low_illumination"
+      ],
+      "avg_edge_density": 5.9,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_13_03243.png"
+    },
+    {
+      "pair_idx": 14,
+      "image_id": 3448,
+      "file_name": "03449.jpg",
+      "num_pedestrians": 23,
+      "scale_counts": {
+        "small": 5,
+        "medium": 18,
+        "large": 0
+      },
+      "smallest_area": 798,
+      "largest_area": 2773,
+      "rgb_brightness": 130.7,
+      "ir_brightness": 198.9,
+      "rgb_contrast": 32.3,
+      "ir_contrast": 58.8,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [
+        "tiny_pedestrian",
+        "crowded",
+        "many_pedestrians"
+      ],
+      "avg_edge_density": 17.5,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_14_03449.png"
+    },
+    {
+      "pair_idx": 15,
+      "image_id": 3621,
+      "file_name": "03622.jpg",
+      "num_pedestrians": 5,
+      "scale_counts": {
+        "small": 0,
+        "medium": 5,
+        "large": 0
+      },
+      "smallest_area": 2886,
+      "largest_area": 4998,
+      "rgb_brightness": 109.2,
+      "ir_brightness": 180.3,
+      "rgb_contrast": 48.4,
+      "ir_contrast": 58.9,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 16.0,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_15_03622.png"
+    },
+    {
+      "pair_idx": 16,
+      "image_id": 4016,
+      "file_name": "04017.jpg",
+      "num_pedestrians": 4,
+      "scale_counts": {
+        "small": 0,
+        "medium": 4,
+        "large": 0
+      },
+      "smallest_area": 1584,
+      "largest_area": 9009,
+      "rgb_brightness": 103.9,
+      "ir_brightness": 130.4,
+      "rgb_contrast": 37.2,
+      "ir_contrast": 80.2,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [
+        "cluttered_background"
+      ],
+      "avg_edge_density": 26.8,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_16_04017.png"
+    },
+    {
+      "pair_idx": 17,
+      "image_id": 4492,
+      "file_name": "04493.jpg",
+      "num_pedestrians": 7,
+      "scale_counts": {
+        "small": 1,
+        "medium": 6,
+        "large": 0
+      },
+      "smallest_area": 1008,
+      "largest_area": 3572,
+      "rgb_brightness": 130.5,
+      "ir_brightness": 89.9,
+      "rgb_contrast": 48.9,
+      "ir_contrast": 48.9,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [
+        "tiny_pedestrian"
+      ],
+      "avg_edge_density": 15.3,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_17_04493.png"
+    },
+    {
+      "pair_idx": 18,
+      "image_id": 4708,
+      "file_name": "04709.jpg",
+      "num_pedestrians": 1,
+      "scale_counts": {
+        "small": 0,
+        "medium": 1,
+        "large": 0
+      },
+      "smallest_area": 3999,
+      "largest_area": 3999,
+      "rgb_brightness": 47.6,
+      "ir_brightness": 188.4,
+      "rgb_contrast": 31.6,
+      "ir_contrast": 37.4,
+      "is_low_light": true,
+      "is_night": true,
+      "challenges": [
+        "night_scene"
+      ],
+      "avg_edge_density": 4.6,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_18_04709.png"
+    },
+    {
+      "pair_idx": 19,
+      "image_id": 4934,
+      "file_name": "04935.jpg",
+      "num_pedestrians": 14,
+      "scale_counts": {
+        "small": 0,
+        "medium": 14,
+        "large": 0
+      },
+      "smallest_area": 1425,
+      "largest_area": 4350,
+      "rgb_brightness": 136.8,
+      "ir_brightness": 170.9,
+      "rgb_contrast": 49.1,
+      "ir_contrast": 72.3,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [
+        "many_pedestrians"
+      ],
+      "avg_edge_density": 22.7,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_19_04935.png"
+    },
+    {
+      "pair_idx": 20,
+      "image_id": 5168,
+      "file_name": "05169.jpg",
+      "num_pedestrians": 4,
+      "scale_counts": {
+        "small": 0,
+        "medium": 4,
+        "large": 0
+      },
+      "smallest_area": 1750,
+      "largest_area": 4004,
+      "rgb_brightness": 156.0,
+      "ir_brightness": 187.0,
+      "rgb_contrast": 39.0,
+      "ir_contrast": 53.7,
+      "is_low_light": false,
+      "is_night": false,
+      "challenges": [],
+      "avg_edge_density": 18.1,
+      "output_path": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage1_analysis\\analysis_20_05169.png"
+    }
+  ]
+}

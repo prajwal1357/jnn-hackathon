@@ -1,0 +1,35 @@
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv_qfdet/
+venv/
+env/
+.venv/
+.env
+
+# Large Model Weights (GitHub 100MB limit)
+*.pth
+*.pt
+*.onnx
+*.engine
+*.bin
+*.pkl
+
+# Datasets & Unseen Testing Data
+VTUAV_subset/
+unseen_data/
+*.zip
+*.tar
+*.gz
+
+# Output Cache & Temporary Logs
+output/phase1_sweep/
+*.log
+.pytest_cache/
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

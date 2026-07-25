@@ -1,0 +1,104 @@
+{
+  "RGB-Only": {
+    "val": {
+      "mode": "RGB-Only",
+      "split": "val",
+      "mAP": 6.9,
+      "mAP50": 23.1,
+      "mAP75": 2.3,
+      "mAPS": 0.5,
+      "mAPM": 6.5,
+      "mAPL": 17.3,
+      "params_M": 60.63,
+      "weights_MB": 462.63,
+      "latency_ms": 115.28,
+      "fps_model": 8.67,
+      "fps_full_pipeline": 8.67,
+      "pred_json": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage2_results\\rgb-only_val.bbox.json"
+    },
+    "test": {
+      "mode": "RGB-Only",
+      "split": "test",
+      "mAP": 5.5,
+      "mAP50": 18.6,
+      "mAP75": 1.9,
+      "mAPS": 0.5,
+      "mAPM": 5.2,
+      "mAPL": 14.2,
+      "params_M": 60.63,
+      "weights_MB": 462.63,
+      "latency_ms": 115.74,
+      "fps_model": 8.64,
+      "fps_full_pipeline": 8.64,
+      "pred_json": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage2_results\\rgb-only_test.bbox.json"
+    }
+  },
+  "Thermal-Only": {
+    "val": {
+      "mode": "Thermal-Only",
+      "split": "val",
+      "mAP": 26.9,
+      "mAP50": 57.1,
+      "mAP75": 22.0,
+      "mAPS": 8.7,
+      "mAPM": 25.2,
+      "mAPL": 56.6,
+      "params_M": 60.63,
+      "weights_MB": 462.63,
+      "latency_ms": 111.62,
+      "fps_model": 8.96,
+      "fps_full_pipeline": 8.96,
+      "pred_json": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage2_results\\thermal-only_val.bbox.json"
+    },
+    "test": {
+      "mode": "Thermal-Only",
+      "split": "test",
+      "mAP": 22.0,
+      "mAP50": 52.4,
+      "mAP75": 15.6,
+      "mAPS": 7.5,
+      "mAPM": 21.7,
+      "mAPL": 49.8,
+      "params_M": 60.63,
+      "weights_MB": 462.63,
+      "latency_ms": 109.53,
+      "fps_model": 9.13,
+      "fps_full_pipeline": 9.13,
+      "pred_json": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage2_results\\thermal-only_test.bbox.json"
+    }
+  },
+  "Full QFDet Baseline (Fused)": {
+    "val": {
+      "mode": "Full QFDet Baseline (Fused)",
+      "split": "val",
+      "mAP": 33.8,
+      "mAP50": 72.1,
+      "mAP75": 27.3,
+      "mAPS": 14.4,
+      "mAPM": 32.4,
+      "mAPL": 58.5,
+      "params_M": 60.63,
+      "weights_MB": 462.63,
+      "latency_ms": 110.52,
+      "fps_model": 9.05,
+      "fps_full_pipeline": 9.05,
+      "pred_json": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage2_results\\full_qfdet_baseline_fused_val.bbox.json"
+    },
+    "test": {
+      "mode": "Full QFDet Baseline (Fused)",
+      "split": "test",
+      "mAP": 29.9,
+      "mAP50": 67.4,
+      "mAP75": 22.7,
+      "mAPS": 12.9,
+      "mAPM": 29.9,
+      "mAPL": 55.5,
+      "params_M": 60.63,
+      "weights_MB": 462.63,
+      "latency_ms": 109.47,
+      "fps_model": 9.13,
+      "fps_full_pipeline": 9.13,
+      "pred_json": "p:\\project\\hackothon\\jnn_shivamogga\\output\\stage2_results\\full_qfdet_baseline_fused_test.bbox.json"
+    }
+  }
+}
