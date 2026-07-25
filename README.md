@@ -29,6 +29,21 @@ To address these challenges, we introduce three progressive architectural & loss
 
 > **Key Finding:** Strategy C achieves peak detection accuracy (**69.8% $mAP_{50}$**, $+2.4\%$ over baseline) and peak small-object precision (**13.8% $mAP_S$**, $+0.9\%$ over baseline) with a massive small-object recall surge (**23.7% $AR_S$**, $+6.0\%$ over baseline) with minimal parameter overhead ($+0.10\text{ M}$ params).
 
+### 📖 Brief Metric Explanations Guide
+
+* **mAP (Mean Average Precision @ IoU=0.50:0.95):**  
+  The standard primary COCO evaluation metric. It measures overall detection precision averaged across 10 IoU overlap thresholds ($0.50, 0.55, \dots, 0.95$). Higher means better overall spatial localization and classification precision.
+* **$\mathbf{mAP_{50}}$ (mAP at 50% IoU Overlap):**  
+  Measures standard detection accuracy where a predicted bounding box overlaps the ground-truth pedestrian box by at least $50\%$. This is the primary benchmark for real-world drone surveillance detection rate.
+* **$\mathbf{mAP_S}$ (Small-Object Precision):**  
+  Average precision specifically calculated for tiny ground-truth pedestrians occupying an area smaller than $32 \times 32$ pixels ($< 1024\text{ px}^2$).
+* **$\mathbf{AR_S}$ (Small-Object Recall):**  
+  Average recall measuring the percentage of all sub-32 pixel pedestrians correctly detected by the model. Higher recall means fewer missed small targets.
+* **Params (Parameters):**  
+  The total number of trainable deep learning network parameters in Millions ($\text{M}$).
+* **FPS (Frames Per Second):**  
+  The inference processing speed measured on NVIDIA GPU hardware in native FP32 precision.
+
 ---
 
 ## 📸 Side-by-Side Prediction Comparisons (3-4 Sample Gallery)
@@ -134,7 +149,6 @@ python run_unseen_pipeline.py --image_dir <path_to_unseen_images> --output_dir o
 │   ├── train.py                        # Unified fine-tuning script
 │   └── generate_graphs.py              # Relative-path graph generator
 ├── output/                             # Generated benchmark charts, heatmaps, & reports
-│   ├── graphs/                         # Stage 1, Stage 2, and Ablation graphs
 │   └── qualitative_comparison/         # 4-Grid qualitative ablation panels
 ├── report.md                           # Project technical report (Markdown)
 ├── report.pdf                           # Project technical report (PDF)
