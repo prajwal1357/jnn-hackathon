@@ -3,6 +3,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 1.12+](https://img.shields.io/badge/pytorch-1.12+-ee4c2c.svg)](https://pytorch.org/)
 [![MMDetection](https://img.shields.io/badge/MMDetection-2.28.2-orange.svg)](https://github.com/open-mmlab/mmdetection)
+[![Project Presentation PPT](https://img.shields.io/badge/Project_Presentation-Google_Drive_PPT-d97706.svg?logo=google-drive)](https://drive.google.com/drive/folders/1V71KKTFbsIesQQ0m97uScZ6YB2v7YXjp?usp=sharing)
 
 ## 📌 Project Overview
 This repository contains the complete implementation and evaluation framework for **RGB-Thermal (RGB-T) Drone Pedestrian Detection** built on top of **QFDet (Quality-aware Fusion Detector)** for urban drone surveillance.
@@ -15,6 +16,16 @@ To address these challenges, we introduce three progressive architectural & loss
 - **Strategy A — Spatially-Aware ModalityGate:** Dynamic spatial trust metering between RGB and Thermal modalities before feature fusion.
 - **Strategy B — Small-Object-Weighted Loss:** Graduated inverse-area scale loss weighting to prioritize tiny ground-truth bounding boxes.
 - **Strategy C — High-Resolution $P_2$ Feature Pyramid Level:** Stride-4 feature extraction ($96 \times 160$ resolution) tapping directly into ResNet $C_2$ stages to preserve fine-grained spatial features.
+
+---
+
+## 📂 Project Deliverables & Links
+
+* 📊 **Project Presentation (PPT Slides):** [Google Drive Presentation Folder](https://drive.google.com/drive/folders/1V71KKTFbsIesQQ0m97uScZ6YB2v7YXjp?usp=sharing)
+* 📑 **Project Technical Report (PDF):** [report.pdf](report.pdf)
+* 📝 **Project Technical Report (Markdown):** [report.md](report.md)
+* 💻 **Source Code Repository:** [github.com/prajwal1357/jnn-hackathon](https://github.com/prajwal1357/jnn-hackathon.git)
+* 🏗️ **System Architecture Diagram:** [system_architecture_diagram.png](output/system_architecture_diagram.png)
 
 ---
 
