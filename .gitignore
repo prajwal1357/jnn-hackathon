@@ -20,6 +20,9 @@ env/
 VTUAV_subset/
 unseen_data/
 extradata/
+test/
+test_output/
+run_test_folder.py
 *.zip
 *.tar
 *.gz
