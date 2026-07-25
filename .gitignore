@@ -19,6 +19,7 @@ env/
 # Datasets & Unseen Testing Data
 VTUAV_subset/
 unseen_data/
+extradata/
 *.zip
 *.tar
 *.gz
