@@ -31,10 +31,14 @@ The figure below illustrates qualitative bounding box detection across the 4 abl
 
 ---
 
-## 📊 Performance Benchmarks & Ablation Charts
+## 📊 Performance Benchmarks & Strategy C Highlights
 
-### 1. Full 4-Stage Ablation ($mAP_{50}$ & $mAP_S$ Progression)
-![Full Ablation Progression](output/strategy_C_highres_fpn/charts/C_full_ablation_mAPS.png)
+### 1. Strategy C Test Set Highlights (Peak Accuracy & Small Object Recall)
+![Strategy C Highlights](output/strategy_C_highres_fpn/charts/C_test_highlights_chart.png)
+
+* **Highest Test $mAP_{50}$ (69.8%):** Strategy C achieves the **peak accuracy score across all models on the unseen Test split** (+2.4% over baseline 67.4%).
+* **Huge Recall Surge ($\text{AR}_S = 23.7\%$):** Strategy C boosts small-object recall from **17.7% to 23.7%** (+6.0% absolute gain in detecting tiny pedestrians).
+* **Highest Small-Object Precision ($mAP_S = 13.8\%$):** Strategy C outperforms baseline (12.9%) and Strategy A (12.4%).
 
 ### 2. Cross-Modal Performance Comparison (RGB vs. Thermal vs. Fused)
 ![mAP Benchmark Comparison](output/stage2_results/benchmark_map_comparison.png)
@@ -74,17 +78,22 @@ pip install -r requirements.txt
 
 ## 🚀 Running Evaluation & Visualizations
 
-### 1. Generate 4-Grid Qualitative Comparison Image
+### 1. Generate Strategy C Highlight Benchmark Chart
+```bash
+python tools/visualization/generate_c_highlights_chart.py
+```
+
+### 2. Generate 4-Grid Qualitative Comparison Image
 ```bash
 python tools/visualization/generate_4grid_comparison.py
 ```
 
-### 2. Evaluate Strategy C (P2 High-Res FPN Model)
+### 3. Evaluate Strategy C (P2 High-Res FPN Model)
 ```bash
 python tools/evaluation/run_strategy_C.py
 ```
 
-### 3. Run Pipeline on Unseen Data Split
+### 4. Run Pipeline on Unseen Data Split
 ```bash
 python run_unseen_pipeline.py --image_dir <path_to_unseen_images> --output_dir output/unseen_predictions
 ```
