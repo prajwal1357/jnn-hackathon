@@ -5,7 +5,7 @@
 [![MMDetection](https://img.shields.io/badge/MMDetection-2.28.2-orange.svg)](https://github.com/open-mmlab/mmdetection)
 
 ## 📌 Project Overview
-This repository contains the complete implementation and evaluation framework for **RGB-Thermal (RGB-T) Drone Pedestrian Detection** built on top of **QFDet (Quality-Guided Fusion Detector)** for urban drone surveillance.
+This repository contains the complete implementation and evaluation framework for **RGB-Thermal (RGB-T) Drone Pedestrian Detection** built on top of **QFDet (Quality-aware Fusion Detector)** for urban drone surveillance.
 
 Drone-based pedestrian detection faces two primary challenges:
 1. **Severe Modality Degradation:** RGB cameras fail under night conditions, while thermal (IR) sensors suffer under thermal glare or sun reflections.
@@ -18,12 +18,38 @@ To address these challenges, we introduce three progressive architectural & loss
 
 ---
 
+## 🎨 4-Grid Qualitative Ablation Comparison
+
+The figure below illustrates qualitative bounding box detection across the 4 ablation stages on a challenging test frame:
+
+![4-Grid Ablation Grid](output/qualitative_comparison/ablation_4grid_comparison.png)
+
+* **Top-Left (Baseline):** Misses tiny distant pedestrians due to rigid spatial downsampling.
+* **Top-Right (Strategy A):** ModalityGate suppresses thermal noise and stabilizes predictions.
+* **Bottom-Left (Strategy A+B):** Inverse-area loss weight pulls in tighter bounding box boundaries.
+* **Bottom-Right (Strategy A+B+C):** High-resolution $P_2$ feature level detects sub-16 pixel pedestrians previously missed by all other variants.
+
+---
+
+## 📊 Performance Benchmarks & Ablation Charts
+
+### 1. Full 4-Stage Ablation ($mAP_{50}$ & $mAP_S$ Progression)
+![Full Ablation Progression](output/strategy_C_highres_fpn/charts/C_full_ablation_mAPS.png)
+
+### 2. Cross-Modal Performance Comparison (RGB vs. Thermal vs. Fused)
+![mAP Benchmark Comparison](output/stage2_results/benchmark_map_comparison.png)
+
+### 3. Scale-Specific Performance Breakdown ($mAP_S$, $mAP_M$, $mAP_L$)
+![Scale Performance](output/stage2_results/benchmark_scale_performance.png)
+
+---
+
 ## 🏆 Master 4-Stage Performance Matrix
 
 | Model / Ablation Stage | Val mAP | Val mAP50 | Val mAP_S | Val AR_S (Recall) | Test mAP | Test mAP50 | Test mAP_S | Test AR_S (Recall) | Params | FPS |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **QFDet Baseline** | 33.8% | 72.1% | 14.4% | 21.3% | 29.9% | 67.4% | 12.9% | 17.7% | 60.63 M | 9.05 |
-| **Strategy A (ModalityGate)** | 33.3% | 71.8% | 15.0% | 22.0% | 29.4% | 67.6% | 12.4% | 17.5% | 60.67 M | 8.90 |
+| **Strategy A (ModalityGate)** | 33.3% | 71.8% | **15.0%** | 22.0% | 29.4% | 67.6% | 12.4% | 17.5% | 60.67 M | 8.90 |
 | **Strategy A+B (Loss)** | 30.7% | 70.2% | 14.2% | 21.3% | 26.8% | 65.1% | 12.1% | 17.7% | 60.67 M | 8.90 |
 | **Strategy A+B+C (High-Res $P_2$)** | **31.8%** | **72.3%** | **13.8%** | **24.3%** | **28.8%** | **69.8%** 🏆 | **13.8%** 🏆 | **23.7%** 🚀 | **60.73 M** | **6.50** |
 
@@ -46,16 +72,16 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Running Evaluation & Training
+## 🚀 Running Evaluation & Visualizations
 
-### 1. Evaluate Strategy C (P2 High-Res FPN Model)
+### 1. Generate 4-Grid Qualitative Comparison Image
 ```bash
-python tools/run_strategy_C.py
+python tools/visualization/generate_4grid_comparison.py
 ```
 
-### 2. Evaluate Strategy A (ModalityGate Model)
+### 2. Evaluate Strategy C (P2 High-Res FPN Model)
 ```bash
-python tools/run_strategy_A.py
+python tools/evaluation/run_strategy_C.py
 ```
 
 ### 3. Run Pipeline on Unseen Data Split
@@ -74,8 +100,13 @@ python run_unseen_pipeline.py --image_dir <path_to_unseen_images> --output_dir o
 │   │   ├── dense_heads/qfdet_prehead.py# Prehead quality estimation & small object loss
 │   │   └── dense_heads/atssq_head.py  # ATSS main head with quality-guided assigner
 │   └── qfdet_configs/                  # Strategy configuration files
-├── tools/                              # Execution, evaluation, and plotting scripts
+├── tools/                              # Execution & evaluation scripts
+│   ├── analysis/                       # Dataset EDA & visual alignment
+│   ├── evaluation/                     # Evaluation & speed benchmarks
+│   ├── training/                       # Fine-tuning & loss sweep scripts
+│   └── visualization/                  # Plotting & 4-grid chart generators
 ├── output/                             # Generated benchmark charts, heatmaps, & reports
+│   └── qualitative_comparison/         # 4-Grid qualitative ablation panels
 ├── report.md                           # Project technical report
 ├── run_unseen_pipeline.py             # Inference pipeline for unseen testing data
 └── requirements.txt                    # Dependencies file
