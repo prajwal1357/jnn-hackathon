@@ -49,16 +49,19 @@ The figure below illustrates qualitative bounding box detection across the 4 abl
 
 ---
 
-## 📊 Performance Benchmarks & Strategy C Highlights
+## 📊 Performance Benchmarks & Stage Charts
 
 ### 1. Strategy C Test Set Highlights (Peak Accuracy & Small Object Recall)
 ![Strategy C Highlights](output/strategy_C_highres_fpn/charts/C_test_highlights_chart.png)
 
-### 2. Cross-Modal Performance Comparison (RGB vs. Thermal vs. Fused)
-![mAP Benchmark Comparison](output/stage2_results/benchmark_map_comparison.png)
+### 2. Stage 2 Multimodal Performance Comparison (RGB vs. Thermal vs. Fused)
+![Stage 2 Baseline Comparison](output/graphs/stage2_baseline_comparison.png)
 
-### 3. Scale-Specific Performance Breakdown ($mAP_S$, $mAP_M$, $mAP_L$)
-![Scale Performance](output/stage2_results/benchmark_scale_performance.png)
+### 3. Stage 1 Pedestrian Scale Distribution Breakdown
+![Stage 1 Scale Distribution](output/graphs/stage1_scale_distribution.png)
+
+### 4. Master 4-Stage Strategy Ablation Chart
+![Strategy Ablation Graph](output/graphs/strategy_ab_ablation_graph.png)
 
 ---
 
@@ -77,8 +80,8 @@ The figure below illustrates qualitative bounding box detection across the 4 abl
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/prajw/jnn_shivamogga.git
-cd jnn_shivamogga
+git clone https://github.com/prajwal1357/jnn-hackathon.git
+cd jnn-hackathon
 
 # 2. Create and activate virtual environment
 python -m venv venv_qfdet
@@ -128,8 +131,10 @@ python run_unseen_pipeline.py --image_dir <path_to_unseen_images> --output_dir o
 │   ├── train.py                        # Unified fine-tuning script
 │   └── generate_graphs.py              # Relative-path graph generator
 ├── output/                             # Generated benchmark charts, heatmaps, & reports
+│   ├── graphs/                         # Stage 1, Stage 2, and Ablation graphs
 │   └── qualitative_comparison/         # 4-Grid qualitative ablation panels
-├── report.md                           # Project technical report
+├── report.md                           # Project technical report (Markdown)
+├── report.pdf                           # Project technical report (PDF)
 ├── run_unseen_pipeline.py             # Inference pipeline for unseen testing data
 └── requirements.txt                    # Dependencies file
 ```
